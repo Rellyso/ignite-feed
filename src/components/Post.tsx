@@ -7,16 +7,19 @@ import { Comment } from './Comment'
 
 import styles from './Post.module.css'
 
+interface Author {
+  avatarUrl: string,
+  name: string,
+  role: string,
+}
+
+interface Content {
+  type: string,
+  content: string,
+}
 interface AuthorProps {
-  author: {
-    avatarUrl: string,
-    name: string,
-    role: string,
-  },
-  content: {
-    type: string,
-    content: string,
-  }[],
+  author: Author,
+  content: Content[],
   publishedAt: Date,
 }
 
